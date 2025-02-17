@@ -706,3 +706,12 @@ OmniSharp.Extensions.JsonRpc.InputProcessingException: There was an error proces
 2025-02-17 23:47:40.545 +05:30 [WRN] No ConfigurationItems have been defined, configuration won't surface any configuration from the client!
 2025-02-17 23:47:41.075 +05:30 [DBG] Finished: Routing Notification initialized in 1468ms
 2025-02-17 23:47:41.076 +05:30 [DBG] Finished: Processing notification initialized in 1470ms
+2025-02-18 00:36:08.334 +05:30 [DBG] Finding descriptors for $/setTrace
+2025-02-18 00:36:08.359 +05:30 [DBG] Swapping from "Serial" to "Parallel"
+2025-02-18 00:36:08.360 +05:30 [DBG] Completing existing request process type "Serial"
+2025-02-18 00:36:08.365 +05:30 [DBG] Queueing "Parallel":$/setTrace request for processing
+2025-02-18 00:36:08.367 +05:30 [DBG] Starting: Processing notification $/setTrace
+2025-02-18 00:36:08.368 +05:30 [DBG] Starting: Routing Notification $/setTrace
+2025-02-18 00:36:08.369 +05:30 [VRB] Converting params for Notification $/setTrace to OmniSharp.Extensions.LanguageServer.Protocol.Models.SetTraceParams
+2025-02-18 00:36:08.390 +05:30 [DBG] Finished: Routing Notification $/setTrace in 20ms
+2025-02-18 00:36:08.390 +05:30 [DBG] Finished: Processing notification $/setTrace in 22ms
