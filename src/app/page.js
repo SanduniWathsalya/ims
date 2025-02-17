@@ -1,101 +1,100 @@
-import Image from "next/image";
 
-export default function Home() {
+
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import Sidebar from "./Components/sidebar";
+
+const Dashboard = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const profile = {
+    fullName: "Hansaka Wijesinghe",
+    email: "hansaka@example.com",
+    mobile: "1234567890",
+  };
+
+  
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className= "h-auto bg-gray-100">
+      <div className="flex min-h-screen h-auto">
+        <Sidebar />
+        {/* Main Content */}
+        <div className="flex flex-col flex-1 overflow-y-auto">
+          <div className="flex justify-end h-12 bg-white border-b border-gray-200">
+           
+          <div className="flex items-center gap-4 text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-300">
+            {/* Bell Icon */}
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="black" d="M6.429 2.413a.75.75 0 0 0-1.13-.986l-1.292 1.48a4.75 4.75 0 0 0-1.17 3.024L2.78 8.65a.75.75 0 1 0 1.5.031l.056-2.718a3.25 3.25 0 0 1 .801-2.069z" />
+              <path fill="black" fillRule="evenodd" d="M6.237 7.7a4.214 4.214 0 0 1 4.206-3.95H11V3a1 1 0 1 1 2 0v.75h.557a4.214 4.214 0 0 1 4.206 3.95l.221 3.534a7.376 7.376 0 0 0 1.308 3.754a1.617 1.617 0 0 1-1.135 2.529l-3.407.408V19a2.75 2.75 0 1 1-5.5 0v-1.075l-3.407-.409a1.617 1.617 0 0 1-1.135-2.528a7.377 7.377 0 0 0 1.308-3.754z" clipRule="evenodd" />
+            </svg>
+          
+          
+            {/* Logout Icon */}
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="black" d="M5 11h8v2H5v3l-5-4l5-4zm-1 7h2.708a8 8 0 1 0 0-12H4a9.985 9.985 0 0 1 8-4c5.523 0 10 4.477 10 10s-4.477 10-10 10a9.985 9.985 0 0 1-8-4" />
+            </svg>
+            
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+           </div> 
+          </div>
+       
+        <div className="flex-1 flex flex-col mt-2">
+          {/* Video Slider - Below Header */}
+          <div className="w-full bg-gray-100 overflow-hidden">
+            <div className="flex justify-center">
+              <video className="w-full h-44 object-cover position-fix" autoPlay muted loop>
+                <source src="/images/video.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+
+          {/* Content Area */}
+          <main className="p-2 overflow-y-auto   flex flex-col items-center justify-between ">
+ <div className="flex justify-between w-full px-20 mt-10 flex-wrap">
+  {/* Personal details */}
+  <div className="w-[400px] h-[160px] bg-white border border-gray-300 p-4 shadow rounded">
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-lg text-black font-bold">Personal Profile</h2>
+      <div className="flex max-w-sm rounded-xl bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg transform transition-transform duration-200 hover:scale-110">
+        <Link href="/Editprofile">
+          <button className="text-black bg-white px-4 py-2 rounded-xl">Edit</button>
+        </Link>
+      </div>
     </div>
+    <div className="text-black text-sm">
+      <p><strong>Name:</strong> {profile.fullName}</p>
+      <p><strong>Email:</strong> {profile.email}</p>
+      <p><strong>Phone:</strong> {profile.mobile}</p>
+    </div>
+  </div>
+
+  {/* Address Book */}
+  <div className="w-[400px] h-[160px] bg-white border border-gray-300 p-4 shadow rounded">
+    <div className="flex justify-between items-center mb-4">
+      <h2 className="text-lg text-black font-bold">Address Book</h2>
+      <div className="flex max-w-sm rounded-xl bg-gradient-to-tr from-pink-300 to-blue-300 p-0.5 shadow-lg transform transition-transform duration-200 hover:scale-110">
+        <Link href="/AddressBook">
+          <button className="text-black bg-white px-4 py-2 rounded-xl">Edit</button>
+        </Link>
+      </div>
+    </div>
+    <p className="text-black text-sm">Save your address here</p>
+  </div>
+</div>
+
+
+</main>
+
+        </div>
+
+        
+      </div>
+      </div>
+    </main>
   );
-}
+};
+
+export default Dashboard;
