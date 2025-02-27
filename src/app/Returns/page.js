@@ -92,13 +92,14 @@ const ReturnsPage = () => {
       <div className="flex flex-col">
         <p className="font-medium text-gray-500">Product Name:</p>
         <p className="text-sm text-gray-500">Quantity: 2</p>
-        <p className="text-sm text-green-500 mt-2">Status: Pending</p>
-        <button
-          className="mt-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-md"
-          onClick={() => handleRefundConfirmation()}
-        >
-          Confirm Refund
-        </button>
+        <p className="text-sm text-red-500 mt-2">Status: Pending</p>
+        <Link href="/Editprofile">
+                <button className="text-black justify-center bg-gray-300 px-12 py-1 mt-2 rounded-lg  hover:bg-green-600 hover:text-white "
+                onClick={() => handleRefundConfirmation()}>
+                Confirm Refund
+                </button>
+                </Link>
+        
       </div>
 
       {/* Fourth Column */}
@@ -129,12 +130,12 @@ const ReturnsPage = () => {
         <p className="font-medium text-gray-500">Product Name:</p>
         <p className="text-sm text-gray-500">Quantity: 1</p>
         <p className="text-sm text-green-500 mt-2">Status: Confirmed</p>
-        <button
-          className="mt-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-md"
-          onClick={() => handleRefundConfirmation()}
-        >
-          Confirm Refund
-        </button>
+        <Link href="/Editprofile">
+                <button className="text-white justify-center bg-green-600 px-12 py-1 mt-2 rounded-lg   "
+                onClick={() => handleRefundConfirmation()}>
+                Confirm Refund
+                </button>
+        </Link>
       </div>
 
       {/* Fourth Column */}

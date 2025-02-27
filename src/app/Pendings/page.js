@@ -93,12 +93,12 @@ const PendingOrders = () => {
         <p className="font-medium text-gray-500">Product Name:</p>
         <p className="text-sm text-gray-500">Quantity: 2</p>
         
-        <button
-          className="mt-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-md"
-          onClick={() => handleRefundConfirmation()}
-        >
-          Confirm Delivery
-        </button>
+        <Link href="/Editprofile">
+                <button className="text-black justify-center bg-gray-300 px-12 py-1 mt-2 rounded-lg  hover:bg-green-600 hover:text-white "
+                onClick={() => handleRefundConfirmation()}>
+                Confirm Delivery
+                </button>
+                </Link>
       </div>
 
       {/* Fourth Column */}
@@ -129,12 +129,12 @@ const PendingOrders = () => {
         <p className="font-medium text-gray-500">Product Name:</p>
         <p className="text-sm text-gray-500">Quantity: 1</p>
        
-        <button
-          className="mt-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-md"
-          onClick={() => handleRefundConfirmation()}
-        >
-          Confirm Delivery
-        </button>
+        <Link href="/Editprofile">
+                <button className="text-black justify-center bg-gray-300 px-12 py-1 mt-2 rounded-lg  hover:bg-green-600 hover:text-white "
+                onClick={() => handleRefundConfirmation()}>
+                Confirm Delivery
+                </button>
+                </Link>
       </div>
 
       {/* Fourth Column */}

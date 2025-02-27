@@ -87,12 +87,13 @@ export default function Reviews() {
               className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
-          <button
-            onClick={handleSubmit}
-            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
-          >
-            Send
-          </button>
+          <div className="inline-flex justify-left mt-4 rounded-xl bg-gradient-to-tr from-pink-500 to-blue-500 p-0.5 shadow transform transition-transform duration-200 hover:scale-110 ">
+                <Link href="/Editprofile">
+                <button className="text-black bg-white px-4 py-1 rounded-xl  ">
+                Accept
+                </button>
+                </Link>
+                </div>
         </div>
       </div>
 

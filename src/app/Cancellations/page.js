@@ -93,17 +93,19 @@ const CancellationsPage = () => {
         <p className="font-medium text-gray-500">Product Name:</p>
         <p className="text-sm text-gray-500">Quantity: 2</p>
         <p className="text-sm text-red-500 mt-2">Status: Pending</p>
-        <div className="inline-flex justify-center mt-2 rounded-lg bg-gradient-to-tr from-pink-500 to-blue-500 p-0.5 shadow transform transition-transform duration-200 hover:scale-110">
-  <Link href="/">
-    <button className="w-full px-16 py-2 bg-white text-black text-sm font-medium rounded-lg"
-    onClick={() => handleRefundConfirmation()}>
-      Confirm Refund
-    </button>
-  </Link>
-</div>
-      </div>
+       
+       
+                <Link href="/Editprofile">
+                <button className="text-black justify-center bg-gray-300 px-12 py-1 mt-2 rounded-lg  hover:bg-green-600 hover:text-white "
+                onClick={() => handleRefundConfirmation()}>
+                Confirm Refund
+                </button>
+                </Link>
+        </div>
 
-      {/* Fourth Column */}
+     
+
+      {/* Fourth Column     */}
       <div className="flex items-center justify-end ">
         <button className="text-blue-500 underline">More Details</button>
       </div>
@@ -131,14 +133,12 @@ const CancellationsPage = () => {
         <p className="font-medium text-gray-500">Product Name:</p>
         <p className="text-sm text-gray-500">Quantity: 1</p>
         <p className="text-sm text-green-500 mt-2">Status: Confirmed</p>
-        <div className="inline-flex justify-center mt-2 rounded-lg bg-gradient-to-tr from-pink-500 to-blue-500 p-0.5 shadow transform transition-transform duration-200 hover:scale-110">
-  <Link href="/">
-    <button className="w-full px-20 py-2 bg-white text-black text-sm font-medium rounded-lg"
-    onClick={() => handleRefundConfirmation()}>
-      Confirmed
-    </button>
-  </Link>
-</div>
+        <Link href="/Editprofile">
+                <button className="text-white justify-center bg-green-600 px-12 py-1 mt-2 rounded-lg   "
+                onClick={() => handleRefundConfirmation()}>
+                Confirm Refund
+                </button>
+                </Link>
 
         
         

@@ -7,9 +7,9 @@ const Sidebar = () => {
   return (
     <main className= "h-auto">
    {/* Sidebar */}
-   <aside class="hidden w-64 bg-white  border border-gray-300 md:block min-h-screen">
+   <aside className="hidden w-64 bg-white  border border-gray-300 md:block min-h-screen">
    <h2 className="text-2xl font-semibold text-center text-yellow-400 mt-4   mb-6">L A L A S T U D I O</h2>
-  <nav class="text-sm text-gray-700">
+  <nav className="text-sm text-gray-700">
     
     <ul class="flex flex-col">
      
@@ -83,7 +83,7 @@ const Sidebar = () => {
         </a>
       </li>
       <li className="px-4 hover:bg-gray-200 ">
-        <Link href="#" className="py-2 flex items-center">
+        <Link href="/Payments" className="py-2 flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokewidth="1.5"
             stroke="currentColor" className="w-4 mr-3">
             <path strokeLinecap="round" strokeLinejoin="round"
